@@ -46,4 +46,4 @@ done
 iptables -t nat -A PREROUTING -i $INT_IF -p udp --dport 53 -j REDIRECT --to-ports 53
 iptables -A FORWARD -i $INT_IF -p udp -j DROP
 iptables -t nat -A PREROUTING -i $INT_IF -p tcp --syn -j REDIRECT --to-ports 9040
-echo "Finished :) Make sure all VirtualBox machines have their adapters set to Bridged Adapter - vboxnet0"
+echo "Finished :) Make sure all VirtualBox machines have their adapters set to Host-only Adapter - vboxnet0"
